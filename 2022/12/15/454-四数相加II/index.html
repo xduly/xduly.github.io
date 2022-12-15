@@ -6,23 +6,25 @@
     
 
     
-    <title>209.长度最小的子数组 | LiuYi&#39;s BLog</title>
+    <title>454.四数相加II | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="209.长度最小的子数组暴力解法双层for循环超时 12345678910111213141516171819class Solution &amp;#123;    public int minSubArrayLen(int target, int[] nums) &amp;#123;        int sum &#x3D; 0;        int res &#x3D; Integer.MAX_VALUE;">
+    <meta name="description" content="哈希法提高程序执行效率，降低时间复杂度，当然使用哈希法会提高空间复杂度，但一般来说我们都是舍空间换时间， 工业开发也是这样。 四数相加与四数之和是有区别的，前者是四个数组分别找出一个元素来相加，后者是一个数组找出四个元素来相加。 思路如下：  时间复杂度降到O(n^2) 12345678910111213141516171819202122232425class Solution &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="209.长度最小的子数组">
-<meta property="og:url" content="https://xduly.github.io/2022/12/09/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="454.四数相加II">
+<meta property="og:url" content="https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="209.长度最小的子数组暴力解法双层for循环超时 12345678910111213141516171819class Solution &amp;#123;    public int minSubArrayLen(int target, int[] nums) &amp;#123;        int sum &#x3D; 0;        int res &#x3D; Integer.MAX_VALUE;">
+<meta property="og:description" content="哈希法提高程序执行效率，降低时间复杂度，当然使用哈希法会提高空间复杂度，但一般来说我们都是舍空间换时间， 工业开发也是这样。 四数相加与四数之和是有区别的，前者是四个数组分别找出一个元素来相加，后者是一个数组找出四个元素来相加。 思路如下：  时间复杂度降到O(n^2) 12345678910111213141516171819202122232425class Solution &amp;#123;">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-12-09T15:24:16.000Z">
-<meta property="article:modified_time" content="2022-12-09T16:19:11.288Z">
+<meta property="og:image" content="https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/%E6%80%9D%E8%B7%AF.png">
+<meta property="article:published_time" content="2022-12-15T02:30:42.000Z">
+<meta property="article:modified_time" content="2022-12-15T03:10:23.289Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/%E6%80%9D%E8%B7%AF.png">
     
 
     
@@ -154,14 +156,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-209.长度最小的子数组" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-454-四数相加II" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        209.长度最小的子数组
+        454.四数相加II
         </h1>
     
 
@@ -172,16 +174,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/09/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="article-date">
-       <time datetime="2022-12-09T15:24:16.000Z" itemprop="datePublished">2022-12-09</time>
+    <a href="/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/" class="article-date">
+       <time datetime="2022-12-15T02:30:42.000Z" itemprop="datePublished">2022-12-15</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/09/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" class="article-date">
-     <time datetime="2022-12-09T16:19:11.288Z" itemprop="dateModified">2022-12-10</time>
+  <a href="/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/" class="article-date">
+     <time datetime="2022-12-15T03:10:23.289Z" itemprop="dateModified">2022-12-15</time>
   </a>
 </div>
 
@@ -203,14 +205,12 @@
 
             
 
-            <h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><h2 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h2><p>双层for循环超时</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="type">int</span> subLen=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i ; j&lt;nums.length ; j++)&#123;</span><br><span class="line">                sum += nums[j];</span><br><span class="line">                <span class="keyword">while</span>(sum&gt;=target)&#123;</span><br><span class="line">                    subLen = j-i+<span class="number">1</span>;</span><br><span class="line">                    res = Math.min(subLen,res);</span><br><span class="line">                    <span class="keyword">break</span>;<span class="comment">// 因为要找符合条件最短的子序列，所以一旦符合条件就break</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (res == Integer.MAX_VALUE ? <span class="number">0</span> : res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h2><p>j指针先去找右边，找到了收缩左边，j继续寻找最优解，找到收缩左边。</p>
-<p>i表示的是滑动窗口的起始位置，j表示的是滑动窗口的终止位置。</p>
-<p>while循环控制滑动窗口的起始位置，for循环控制滑动窗口的终止位置。</p>
-<p>result初始应该取最大值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> i= <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;j&lt;nums.length;j++)&#123;</span><br><span class="line">            sum+=nums[j];</span><br><span class="line">            <span class="keyword">while</span>(sum&gt;=target)&#123;</span><br><span class="line">                <span class="type">int</span> subLen= j-i+<span class="number">1</span>;</span><br><span class="line">                result = Math.min(subLen,result);</span><br><span class="line">                sum-=nums[i++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (result==Integer.MAX_VALUE ? <span class="number">0</span> : result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p> 哈希法提高程序执行效率，降低时间复杂度，当然使用哈希法会提高空间复杂度，但一般来说我们都是舍空间换时间， 工业开发也是这样。</p>
+<p>四数相加与四数之和是有区别的，前者是四个数组分别找出一个元素来相加，后者是一个数组找出四个元素来相加。</p>
+<p>思路如下：</p>
+<p><img src="/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/%E6%80%9D%E8%B7%AF.png"></p>
+<p>时间复杂度降到O(n^2)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fourSumCount</span><span class="params">(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2, <span class="type">int</span>[] nums3, <span class="type">int</span>[] nums4)</span> &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; pool = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : nums1) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j : nums2) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> i + j;</span><br><span class="line">                <span class="keyword">if</span> (pool.containsKey(temp)) &#123;</span><br><span class="line">                    pool.put(temp, pool.get(temp) + <span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    pool.put(temp, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : nums3) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j : nums4) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> i + j;</span><br><span class="line">                <span class="keyword">if</span> (pool.containsKey(<span class="number">0</span>-temp)) &#123;</span><br><span class="line">                    res += pool.get(<span class="number">0</span>-temp);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -219,7 +219,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/09/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" data-id="clboi83fm0008ewon0zot794e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/" data-id="clboi83fr000bewon2tse2mml" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,17 +289,21 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "209.长度最小的子数组",
-        "image": "https://xduly.github.io",
+        "headline": "454.四数相加II",
+        "image": "https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/%E6%80%9D%E8%B7%AF.png",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-09",
-        "dateCreated": "2022-12-09",
-        "dateModified": "2022-12-10",
-        "url": "https://xduly.github.io/2022/12/09/209.长度最小的子数组/",
-        "description": "209.长度最小的子数组暴力解法双层for循环超时
-12345678910111213141516171819class Solution &#123;    public int minSubArrayLen(int target, int[] nums) &#123;        int sum = 0;        int res = Integer.MAX_VALUE;        ",
-        "wordCount": 564
+        "datePublished": "2022-12-15",
+        "dateCreated": "2022-12-15",
+        "dateModified": "2022-12-15",
+        "url": "https://xduly.github.io/2022/12/15/454-四数相加II/",
+        "description": " 哈希法提高程序执行效率，降低时间复杂度，当然使用哈希法会提高空间复杂度，但一般来说我们都是舍空间换时间， 工业开发也是这样。
+四数相加与四数之和是有区别的，前者是四个数组分别找出一个元素来相加，后者是一个数组找出四个元素来相加。
+思路如下：
+
+时间复杂度降到O(n^2)
+12345678910111213141516171819202122232425class Solution &#123; ",
+        "wordCount": 445
     }
 </script>
 
@@ -380,20 +384,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2022/12/10/59.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            59.螺旋矩阵II
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2022/12/09/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/14/1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">977.有序数组的平方</p>
+        <p class="article-nav-title">1.两数之和</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -589,7 +583,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/09/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/';
+    var disqus_url = 'https://xduly.github.io/2022/12/15/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II/';
     
     (function() {
     var dsq = document.createElement('script');
