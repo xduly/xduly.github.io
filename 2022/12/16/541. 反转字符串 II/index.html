@@ -6,21 +6,21 @@
     
 
     
-    <title>15.三数之和 | LiuYi&#39;s BLog</title>
+    <title>541. 反转字符串 II | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="哈希表做有很多去重的细节需要处理，这里使用双指针比较好。 双指针法找出a + b + c &#x3D; 0，a &#x3D; nums[i], b &#x3D; nums[left], c &#x3D; nums[right]。 需要注意的是：  对a去重，我们要做的是不能有重复的三元组，但三元组内的元素是可以重复的。所以是判断nums[i] &#x3D;&#x3D; nums[i-1]。 对b和">
+    <meta name="description" content="12345678910111213141516171819202122class Solution &amp;#123;    public String reverseStr(String s, int k) &amp;#123;        StringBuffer  res &#x3D; new StringBuffer();        int start &#x3D; 0;        int len &#x3D; s.len">
 <meta property="og:type" content="article">
-<meta property="og:title" content="15.三数之和">
-<meta property="og:url" content="https://xduly.github.io/2022/12/15/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
+<meta property="og:title" content="541. 反转字符串 II">
+<meta property="og:url" content="https://xduly.github.io/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="哈希表做有很多去重的细节需要处理，这里使用双指针比较好。 双指针法找出a + b + c &#x3D; 0，a &#x3D; nums[i], b &#x3D; nums[left], c &#x3D; nums[right]。 需要注意的是：  对a去重，我们要做的是不能有重复的三元组，但三元组内的元素是可以重复的。所以是判断nums[i] &#x3D;&#x3D; nums[i-1]。 对b和">
+<meta property="og:description" content="12345678910111213141516171819202122class Solution &amp;#123;    public String reverseStr(String s, int k) &amp;#123;        StringBuffer  res &#x3D; new StringBuffer();        int start &#x3D; 0;        int len &#x3D; s.len">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-12-15T04:18:46.000Z">
-<meta property="article:modified_time" content="2022-12-15T04:25:52.806Z">
+<meta property="article:published_time" content="2022-12-16T03:55:45.000Z">
+<meta property="article:modified_time" content="2022-12-20T03:56:28.224Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
     
@@ -154,14 +154,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-15-三数之和" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-541. 反转字符串 II" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        15.三数之和
+        541. 反转字符串 II
         </h1>
     
 
@@ -172,16 +172,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/15/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" class="article-date">
-       <time datetime="2022-12-15T04:18:46.000Z" itemprop="datePublished">2022-12-15</time>
+    <a href="/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/" class="article-date">
+       <time datetime="2022-12-16T03:55:45.000Z" itemprop="datePublished">2022-12-16</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/15/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" class="article-date">
-     <time datetime="2022-12-15T04:25:52.806Z" itemprop="dateModified">2022-12-15</time>
+  <a href="/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/" class="article-date">
+     <time datetime="2022-12-20T03:56:28.224Z" itemprop="dateModified">2022-12-20</time>
   </a>
 </div>
 
@@ -203,14 +203,7 @@
 
             
 
-            <p>哈希表做有很多去重的细节需要处理，这里使用双指针比较好。</p>
-<h2 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h2><p>找出a + b + c &#x3D; 0，a &#x3D; nums[i], b &#x3D; nums[left], c &#x3D; nums[right]。</p>
-<p>需要注意的是：</p>
-<ul>
-<li>对a去重，我们要做的是不能有重复的三元组，但三元组内的元素是可以重复的。所以是判断nums[i] &#x3D;&#x3D; nums[i-1]。</li>
-<li>对b和c去重，去重逻辑应该放在找到一个三元组之后。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">threeSum</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">	        <span class="keyword">if</span> (nums[i] &gt; <span class="number">0</span>) &#123; <span class="comment">//排序后首元素大于零，直接跳过</span></span><br><span class="line">                <span class="keyword">return</span> result;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123;  <span class="comment">// 去重a</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> i + <span class="number">1</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (right &gt; left) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> nums[i] + nums[left] + nums[right];</span><br><span class="line">                <span class="comment">//调整指针范围寻找sum=0</span></span><br><span class="line">                <span class="keyword">if</span> (sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    right--;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    left++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));</span><br><span class="line">		    		<span class="comment">// 对b和c去重</span></span><br><span class="line">                    <span class="keyword">while</span> (right &gt; left &amp;&amp; nums[right] == nums[right - <span class="number">1</span>]) right--;</span><br><span class="line">                    <span class="keyword">while</span> (right &gt; left &amp;&amp; nums[left] == nums[left + <span class="number">1</span>]) left++;</span><br><span class="line">                    </span><br><span class="line">                    right--; </span><br><span class="line">                    left++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">StringBuffer</span>  <span class="variable">res</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="keyword">while</span>(start &lt; len)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">firstK</span> <span class="operator">=</span> (start+k)&lt;len ? start+k : len;</span><br><span class="line">            <span class="type">int</span> <span class="variable">secondK</span> <span class="operator">=</span> (start+<span class="number">2</span>*k)&lt;len ? start+<span class="number">2</span>*k : len;</span><br><span class="line"></span><br><span class="line">            <span class="type">StringBuffer</span>  <span class="variable">temp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">            temp.append(s.substring(start,firstK));</span><br><span class="line">            res.append(temp.reverse());</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(firstK &lt; secondK)&#123;</span><br><span class="line">                res.append(s.substring(firstK,secondK));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            start+=<span class="number">2</span>*k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -219,7 +212,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/15/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" data-id="clbz7rjz7000428onguxc75ml" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/" data-id="clbz7rjzi000g28one8ax5p7c" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,21 +282,16 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "15.三数之和",
+        "headline": "541. 反转字符串 II",
         "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-15",
-        "dateCreated": "2022-12-15",
-        "dateModified": "2022-12-15",
-        "url": "https://xduly.github.io/2022/12/15/15-三数之和/",
-        "description": "哈希表做有很多去重的细节需要处理，这里使用双指针比较好。
-双指针法找出a + b + c &#x3D; 0，a &#x3D; nums[i], b &#x3D; nums[left], c &#x3D; nums[right]。
-需要注意的是：
-
-对a去重，我们要做的是不能有重复的三元组，但三元组内的元素是可以重复的。所以是判断nums[i] &#x3D;&#x3D; nums[i-1]。
-对b和",
-        "wordCount": 671
+        "datePublished": "2022-12-16",
+        "dateCreated": "2022-12-16",
+        "dateModified": "2022-12-20",
+        "url": "https://xduly.github.io/2022/12/16/541. 反转字符串 II/",
+        "description": "12345678910111213141516171819202122class Solution &#123;    public String reverseStr(String s, int k) &#123;        StringBuffer  res = new StringBuffer();        int start = 0;        int len = s.len",
+        "wordCount": 299
     }
 </script>
 
@@ -384,20 +372,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2022/12/15/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2022/12/19/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
-            18.四数之和
+            344.反转字符串
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2022/12/15/383.%20%E8%B5%8E%E9%87%91%E4%BF%A1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">383. 赎金信</p>
+        <p class="article-nav-title">机器学习day1——线性回归</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -593,7 +581,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/15/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/';
+    var disqus_url = 'https://xduly.github.io/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/';
     
     (function() {
     var dsq = document.createElement('script');
