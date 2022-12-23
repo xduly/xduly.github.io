@@ -6,25 +6,23 @@
     
 
     
-    <title>机器学习day1——线性回归 | LiuYi&#39;s BLog</title>
+    <title>Java IO知识总结 | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="机器学习day1——线性回归一、线性回归原理推导偏置项是为了提高模型准确性所作出的微调。   添加变量x0，赋值全为1.目的是为了让数据可以转换成矩阵，方便计算。 1.误差项的定义真实值和预测值之间肯定是要存在差异的，（用ε来表示该误差）   误差：ε^(i)是独立并且具有相同的分布，并且服从均值为0方差为θ^2的高斯分布。 独立同分布的意义：  独立：样本产生的误差是独立的。 同分布 高斯分布：">
+    <meta name="description" content="一、Java IO基础知识总结二、Java IO设计模式总结1.装饰器模式装饰器（Decorator）模式 可以在不改变原有对象的情况下拓展其功能。 2.适配器模式3.工厂模式4.观察者模式三、Java IO模型详解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习day1——线性回归">
-<meta property="og:url" content="https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
+<meta property="og:title" content="Java IO知识总结">
+<meta property="og:url" content="https://xduly.github.io/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="机器学习day1——线性回归一、线性回归原理推导偏置项是为了提高模型准确性所作出的微调。   添加变量x0，赋值全为1.目的是为了让数据可以转换成矩阵，方便计算。 1.误差项的定义真实值和预测值之间肯定是要存在差异的，（用ε来表示该误差）   误差：ε^(i)是独立并且具有相同的分布，并且服从均值为0方差为θ^2的高斯分布。 独立同分布的意义：  独立：样本产生的误差是独立的。 同分布 高斯分布：">
+<meta property="og:description" content="一、Java IO基础知识总结二、Java IO设计模式总结1.装饰器模式装饰器（Decorator）模式 可以在不改变原有对象的情况下拓展其功能。 2.适配器模式3.工厂模式4.观察者模式三、Java IO模型详解">
 <meta property="og:locale">
-<meta property="og:image" content="https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215163544231.png">
-<meta property="article:published_time" content="2022-12-15T12:23:24.000Z">
-<meta property="article:modified_time" content="2022-12-15T12:26:27.393Z">
+<meta property="article:published_time" content="2022-12-22T15:19:19.000Z">
+<meta property="article:modified_time" content="2022-12-22T15:34:28.753Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215163544231.png">
     
 
     
@@ -156,14 +154,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-机器学习day1——线性回归" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-IO知识总结" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        机器学习day1——线性回归
+        Java IO知识总结
         </h1>
     
 
@@ -174,16 +172,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="article-date">
-       <time datetime="2022-12-15T12:23:24.000Z" itemprop="datePublished">2022-12-15</time>
+    <a href="/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="article-date">
+       <time datetime="2022-12-22T15:19:19.000Z" itemprop="datePublished">2022-12-22</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" class="article-date">
-     <time datetime="2022-12-15T12:26:27.393Z" itemprop="dateModified">2022-12-15</time>
+  <a href="/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="article-date">
+     <time datetime="2022-12-22T15:34:28.753Z" itemprop="dateModified">2022-12-22</time>
   </a>
 </div>
 
@@ -205,82 +203,15 @@
 
             
 
-            <h1 id="机器学习day1——线性回归"><a href="#机器学习day1——线性回归" class="headerlink" title="机器学习day1——线性回归"></a>机器学习day1——线性回归</h1><h2 id="一、线性回归原理推导"><a href="#一、线性回归原理推导" class="headerlink" title="一、线性回归原理推导"></a>一、线性回归原理推导</h2><p>偏置项是为了提高模型准确性所作出的微调。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215163544231.png" alt="image-20221215163544231" style="zoom: 25%;">
-
-<p>添加变量x0，赋值全为1.目的是为了让数据可以转换成矩阵，方便计算。</p>
-<h3 id="1-误差项的定义"><a href="#1-误差项的定义" class="headerlink" title="1.误差项的定义"></a>1.误差项的定义</h3><p>真实值和预测值之间肯定是要存在差异的，（用ε来表示该误差）</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215164127289.png" alt="image-20221215164127289" style="zoom:25%;">
-
-<p><strong>误差</strong>：ε^(i)是独立并且具有相同的分布，并且服从均值为0方差为θ^2的高斯分布。</p>
-<p><strong>独立同分布的意义：</strong></p>
-<ul>
-<li>独立：样本产生的误差是独立的。</li>
-<li>同分布</li>
-<li>高斯分布：绝大多数情况浮动不太大，极小情况下浮动会比较大。</li>
-</ul>
-<h3 id="2-似然函数的作用"><a href="#2-似然函数的作用" class="headerlink" title="2.似然函数的作用"></a>2.似然函数的作用</h3><p>x是数据，y是标签。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215164940096.png" alt="image-20221215164940096" style="zoom: 25%;">
-
-<p>（2）式做了简化，ε^(i)应当减去均值，但此处均值为0.</p>
-<p>希望找到一个θ跟x组合之后，跟真实值y接近，即θ跟x组合之后称为真实值的可能性越大越好。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215165847803.png" alt="image-20221215165847803" style="zoom: 33%;">
-
-<p>只是想要得到极值点θ1，加一个对数不会对极值点造成影响。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215170143776.png" alt="image-20221215170143776" style="zoom:33%;">
-
-<p>目标：让似然函数越大越好，所以就要让上式中的减数（&gt;&#x3D;0）越小越好,故有：</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215170359397.png" alt="image-20221215170359397" style="zoom:33%;">
-
-<h3 id="3-参数求解"><a href="#3-参数求解" class="headerlink" title="3.参数求解"></a>3.参数求解</h3><p>目标函数：</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215170705197.png" alt="image-20221215170705197" style="zoom:33%;">
-
-<p>矩阵A乘以A的转置等于A的行列式的平方，x^(i)是第i列特征，不能把X当作一个数，而应该当作一个矩阵。对θ求偏导，令其等于0，得到θ极值点。</p>
-<p>对矩阵求偏导相关数学知识。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215172321390.png" alt="image-20221215172321390" style="zoom:33%;">
-
-<p><strong>评估方法：</strong></p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215174252787.png" alt="image-20221215174252787" style="zoom: 50%;">
-
-<h3 id="4-梯度下降"><a href="#4-梯度下降" class="headerlink" title="4.梯度下降"></a>4.梯度下降</h3><p>当我们得到一个目标函数以后，如何求解？</p>
-<p>并不一定可解，线性回归可以当做一个特例。</p>
-<p>机器学习的套路就是我交给机器一堆数据，然后告诉它什么样的学习方式是对的（目标函数），然后叫它朝着这个方向去做。</p>
-<p>如何优化：迭代，每次优化一点点。</p>
-<p>下降速度越快越好，沿着梯度的反方向叫下降。</p>
-<p>目的：寻找山谷的最低点。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215174444598.png" alt="image-20221215174444598" style="zoom:50%;">
-
-<h3 id="5-参数更新方法"><a href="#5-参数更新方法" class="headerlink" title="5.参数更新方法"></a>5.参数更新方法</h3><img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215174421011.png" alt="image-20221215174421011" style="zoom: 50%;">
-
-<p>分别对θ0和θ1进行优化，两者独立，当作两个轴，然后对目标函数分别求偏导。</p>
-<p>更新参数的步骤：</p>
-<ol>
-<li>找到当前最合适的方向</li>
-<li>走一小步</li>
-<li>按照方向与步伐更新参数</li>
-</ol>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215174722009.png" alt="image-20221215174722009" style="zoom: 50%;">
-
-<p>去掉分母的m，该目标函数即为求单个样本的损失函数（最小二乘法）。求和再求均值，可以综合多个样本的数据。</p>
-<p>（1）批量梯度下降：容易得到最优解，但是由于每次考虑所有样本，速度满。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215175109105.png" alt="image-20221215175109105" style="zoom:53%;">
-
-<p>i是当前第几个样本，j是该样本的第几列。对目标函数求偏导以后，得到的是一个方向（梯度），梯度再加负号，就是梯度下降。负负得正，θ‘被更新。</p>
-<p>（2）随机梯度下降：每次找一个样本，迭代速度快，但不一定每次都朝着收敛的方向。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215175128275.png" alt="image-20221215175128275" style="zoom:60%;">
-
-<p>（3）小批量梯度下降法：每次更新选择一小部分数据来算，实用，batch选的大，意味着要求精度越高越好，选的小，意味着速度很快。时间和性能做取舍。</p>
-<img src="/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215175147711.png" alt="image-20221215175147711" style="zoom: 43%;">
-
-<h3 id="6-优化参数设置"><a href="#6-优化参数设置" class="headerlink" title="6.优化参数设置"></a>6.优化参数设置</h3><p>学习率（步长）：对结果会产生巨大的影响，一般选的小一些。</p>
-<h2 id="二、线性回归代码实现"><a href="#二、线性回归代码实现" class="headerlink" title="二、线性回归代码实现"></a>二、线性回归代码实现</h2><h2 id="三、模型评估方法"><a href="#三、模型评估方法" class="headerlink" title="三、模型评估方法"></a>三、模型评估方法</h2>
+            <h1 id="一、Java-IO基础知识总结"><a href="#一、Java-IO基础知识总结" class="headerlink" title="一、Java IO基础知识总结"></a>一、Java IO基础知识总结</h1><h1 id="二、Java-IO设计模式总结"><a href="#二、Java-IO设计模式总结" class="headerlink" title="二、Java IO设计模式总结"></a>二、Java IO设计模式总结</h1><h2 id="1-装饰器模式"><a href="#1-装饰器模式" class="headerlink" title="1.装饰器模式"></a>1.装饰器模式</h2><p><strong>装饰器（Decorator）模式</strong> 可以在不改变原有对象的情况下拓展其功能。</p>
+<h2 id="2-适配器模式"><a href="#2-适配器模式" class="headerlink" title="2.适配器模式"></a>2.适配器模式</h2><h2 id="3-工厂模式"><a href="#3-工厂模式" class="headerlink" title="3.工厂模式"></a>3.工厂模式</h2><h2 id="4-观察者模式"><a href="#4-观察者模式" class="headerlink" title="4.观察者模式"></a>4.观察者模式</h2><h1 id="三、Java-IO模型详解"><a href="#三、Java-IO模型详解" class="headerlink" title="三、Java IO模型详解"></a>三、Java IO模型详解</h1>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" data-id="clc088qcs000rhwona4t8e610" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" data-id="clc088qco000lhwon663bd337" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -350,28 +281,17 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "机器学习day1——线性回归",
-        "image": "https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/image-20221215163544231.png",
+        "headline": "Java IO知识总结",
+        "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-15",
-        "dateCreated": "2022-12-15",
-        "dateModified": "2022-12-15",
-        "url": "https://xduly.github.io/2022/12/15/机器学习day1——线性回归/",
-        "description": "机器学习day1——线性回归一、线性回归原理推导偏置项是为了提高模型准确性所作出的微调。
-
-
-添加变量x0，赋值全为1.目的是为了让数据可以转换成矩阵，方便计算。
-1.误差项的定义真实值和预测值之间肯定是要存在差异的，（用ε来表示该误差）
-
-
-误差：ε^(i)是独立并且具有相同的分布，并且服从均值为0方差为θ^2的高斯分布。
-独立同分布的意义：
-
-独立：样本产生的误差是独立的。
-同分布
-高斯分布：",
-        "wordCount": 93
+        "datePublished": "2022-12-22",
+        "dateCreated": "2022-12-22",
+        "dateModified": "2022-12-22",
+        "url": "https://xduly.github.io/2022/12/22/IO知识总结/",
+        "description": "一、Java IO基础知识总结二、Java IO设计模式总结1.装饰器模式装饰器（Decorator）模式 可以在不改变原有对象的情况下拓展其功能。
+2.适配器模式3.工厂模式4.观察者模式三、Java IO模型详解",
+        "wordCount": 36
     }
 </script>
 
@@ -452,20 +372,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2022/12/16/541.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20II/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
-            541. 反转字符串 II
+            day13栈与队列|239. 滑动窗口最大值|347.前 K 个高频元素
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2022/12/15/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/22/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">18.四数之和</p>
+        <p class="article-nav-title">Java集合常见面试题总结</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -661,7 +581,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0day1%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/';
+    var disqus_url = 'https://xduly.github.io/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/';
     
     (function() {
     var dsq = document.createElement('script');
