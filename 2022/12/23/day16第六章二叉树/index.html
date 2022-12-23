@@ -6,25 +6,23 @@
     
 
     
-    <title>哈希表理论基础 | LiuYi&#39;s BLog</title>
+    <title>day16第六章二叉树|104.二叉树的最大深度|559.n叉树的最大深度|111.二叉树的最小深度|222.完全二叉树的节点个数 | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="哈希表理论基础当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法。 HashMap的内部实现原理HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。   HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所">
+    <meta name="description" content="下面这两道题都可以用层序遍历来做。 使用前序求的就是深度，使用后序求的是高度。  二叉树节点的深度：指从根节点到该节点的最长简单路径边的条数或者节点数（取决于深度从0开始还是从1开始） 二叉树节点的高度：指从该节点到叶子节点的最长简单路径边的条数后者节点数（取决于高度从0开始还是从1开始）  而根节点的高度就是二叉树的最大深度，所以本题中我们通过后序求的根节点高度来求的二叉树最大深度。 104.二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="哈希表理论基础">
-<meta property="og:url" content="https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="day16第六章二叉树|104.二叉树的最大深度|559.n叉树的最大深度|111.二叉树的最小深度|222.完全二叉树的节点个数">
+<meta property="og:url" content="https://xduly.github.io/2022/12/23/day16%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="哈希表理论基础当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法。 HashMap的内部实现原理HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。   HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所">
+<meta property="og:description" content="下面这两道题都可以用层序遍历来做。 使用前序求的就是深度，使用后序求的是高度。  二叉树节点的深度：指从根节点到该节点的最长简单路径边的条数或者节点数（取决于深度从0开始还是从1开始） 二叉树节点的高度：指从该节点到叶子节点的最长简单路径边的条数后者节点数（取决于高度从0开始还是从1开始）  而根节点的高度就是二叉树的最大深度，所以本题中我们通过后序求的根节点高度来求的二叉树最大深度。 104.二">
 <meta property="og:locale">
-<meta property="og:image" content="https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/image-20221217182710030.png">
-<meta property="article:published_time" content="2022-12-14T04:01:06.000Z">
-<meta property="article:modified_time" content="2022-12-17T12:31:18.300Z">
+<meta property="article:published_time" content="2022-12-23T10:50:53.000Z">
+<meta property="article:modified_time" content="2022-12-23T14:17:01.566Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/image-20221217182710030.png">
     
 
     
@@ -156,14 +154,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-哈希表理论基础" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-day16第六章二叉树" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        哈希表理论基础
+        day16第六章二叉树|104.二叉树的最大深度|559.n叉树的最大深度|111.二叉树的最小深度|222.完全二叉树的节点个数
         </h1>
     
 
@@ -174,16 +172,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="article-date">
-       <time datetime="2022-12-14T04:01:06.000Z" itemprop="datePublished">2022-12-14</time>
+    <a href="/2022/12/23/day16%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+       <time datetime="2022-12-23T10:50:53.000Z" itemprop="datePublished">2022-12-23</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="article-date">
-     <time datetime="2022-12-17T12:31:18.300Z" itemprop="dateModified">2022-12-17</time>
+  <a href="/2022/12/23/day16%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+     <time datetime="2022-12-23T14:17:01.566Z" itemprop="dateModified">2022-12-23</time>
   </a>
 </div>
 
@@ -205,27 +203,31 @@
 
             
 
-            <h1 id="哈希表理论基础"><a href="#哈希表理论基础" class="headerlink" title="哈希表理论基础"></a><strong>哈希表理论基础</strong></h1><p>当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法。</p>
-<h5 id="HashMap的内部实现原理"><a href="#HashMap的内部实现原理" class="headerlink" title="HashMap的内部实现原理"></a>HashMap的内部实现原理</h5><p>HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。  </p>
-<p>HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。  </p>
-<p>需要注意Jdk 1.8中对HashMap的实现做了优化，当链表中的节点数据超过八个之后，该链表会转为红黑树来提高查询效率，从原来的O(n)到 O(logn)  。</p>
-<img src="/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/image-20221217182710030.png" alt="image-20221217182710030" style="zoom:50%;">
+            <p>下面这两道题都可以用层序遍历来做。</p>
+<p>使用前序求的就是深度，使用后序求的是高度。</p>
+<ul>
+<li>二叉树节点的深度：指从根节点到该节点的最长简单路径边的条数或者节点数（取决于深度从0开始还是从1开始）</li>
+<li>二叉树节点的高度：指从该节点到叶子节点的最长简单路径边的条数后者节点数（取决于高度从0开始还是从1开始）</li>
+</ul>
+<p><strong>而根节点的高度就是二叉树的最大深度</strong>，所以本题中我们通过后序求的根节点高度来求的二叉树最大深度。</p>
+<h1 id="104-二叉树的最大深度"><a href="#104-二叉树的最大深度" class="headerlink" title="104.二叉树的最大深度"></a>104.二叉树的最大深度</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> preOrder(root);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">preOrder</span><span class="params">(TreeNode root)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> preOrder(root.left);</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> preOrder(root.right);</span><br><span class="line">        <span class="keyword">return</span> (left&gt;right ? left+<span class="number">1</span> : right+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="HashMap-基于-Hash-算法实现的-："><a href="#HashMap-基于-Hash-算法实现的-：" class="headerlink" title="HashMap 基于 Hash 算法实现的 ："></a>HashMap 基于 Hash 算法实现的 ：</h5><ol>
-<li>当我们往Hashmap中put元素时，利用key的hashCode重新hash计算出当前对象的元素在数组中的下标。</li>
-<li>存储时，如果出现hash值相同的key，此时有两种情况。(1)如果key相同，则覆盖原始值；(2)如果key不同（出现冲突），则将当前的key-value 放入链表中</li>
-<li>获取时，直接找到hash值对应的下标，在进一步判断key是否相同，从而找到对应值。</li>
-<li>理解了以上过程就不难明白HashMap是如何解决hash冲突的问题，核心就是使用了数组的存储方式，然后将冲突的key的对象放入链表中，一旦发现冲突就在链表中做进一步的对比</li>
-</ol>
-<h5 id="在使用-HashMap-的时候，用-String-做-key-有什么好处？"><a href="#在使用-HashMap-的时候，用-String-做-key-有什么好处？" class="headerlink" title="在使用 HashMap 的时候，用 String 做 key 有什么好处？"></a>在使用 HashMap 的时候，用 String 做 key 有什么好处？</h5><p>HashMap 内部实现是通过 key 的 hashcode 来确定 value 的存储位置，因为字符串是不可变的，所以当创建字符串时，它的 hashcode 被缓存下来，不需要再次计算，所以相比于其他对象更快。  </p>
-<h5 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h5><h5 id="哈希碰撞"><a href="#哈希碰撞" class="headerlink" title="哈希碰撞"></a>哈希碰撞</h5><h5 id="常见三种哈希结构：数组，set-和map"><a href="#常见三种哈希结构：数组，set-和map" class="headerlink" title="常见三种哈希结构：数组，set 和map"></a>常见三种哈希结构：数组，set 和map</h5>
+<h1 id="559-n叉树的最大深度"><a href="#559-n叉树的最大深度" class="headerlink" title="559.n叉树的最大深度"></a>559.n叉树的最大深度</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">/*递归法，后序遍历求root节点的高度*/</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(Node root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">depth</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root.children != <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (Node child : root.children)&#123;</span><br><span class="line">                depth = Math.max(depth, maxDepth(child));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> depth + <span class="number">1</span>; <span class="comment">//中节点</span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="111-二叉树的最小深度"><a href="#111-二叉树的最小深度" class="headerlink" title="111.二叉树的最小深度"></a>111.二叉树的最小深度</h1><p>题目中给出最小深度是指叶子节点到根节点的最小距离，这是和最大深度的区别。</p>
+<p>和上面题目的区别就在于对左右节点为空的逻辑处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 递归法，相比求MaxDepth要复杂点</span></span><br><span class="line"><span class="comment">     * 因为最小深度是从根节点到最近**叶子节点**的最短路径上的节点数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">leftDepth</span> <span class="operator">=</span> minDepth(root.left);</span><br><span class="line">        <span class="type">int</span> <span class="variable">rightDepth</span> <span class="operator">=</span> minDepth(root.right);</span><br><span class="line">        <span class="keyword">if</span> (root.left == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> rightDepth + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.right == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> leftDepth + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左右结点都不为null</span></span><br><span class="line">        <span class="keyword">return</span> Math.min(leftDepth, rightDepth) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="222-完全二叉树的节点个数"><a href="#222-完全二叉树的节点个数" class="headerlink" title="222.完全二叉树的节点个数"></a>222.完全二叉树的节点个数</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 通用递归解法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">countNodes</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> countNodes(root.left) + countNodes(root.right) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" data-id="clc0lmj17000t6gondqgd4ad8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://xduly.github.io/2022/12/23/day16%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clc0lmj17000s6gon111a5i6x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -295,18 +297,23 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "哈希表理论基础",
-        "image": "https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/image-20221217182710030.png",
+        "headline": "day16第六章二叉树|104.二叉树的最大深度|559.n叉树的最大深度|111.二叉树的最小深度|222.完全二叉树的节点个数",
+        "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-14",
-        "dateCreated": "2022-12-14",
-        "dateModified": "2022-12-17",
-        "url": "https://xduly.github.io/2022/12/14/哈希表理论基础/",
-        "description": "哈希表理论基础当我们遇到了要快速判断一个元素是否出现集合里的时候，就要考虑哈希法。
-HashMap的内部实现原理HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。  
-HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所",
-        "wordCount": 76
+        "datePublished": "2022-12-23",
+        "dateCreated": "2022-12-23",
+        "dateModified": "2022-12-23",
+        "url": "https://xduly.github.io/2022/12/23/day16第六章二叉树/",
+        "description": "下面这两道题都可以用层序遍历来做。
+使用前序求的就是深度，使用后序求的是高度。
+
+二叉树节点的深度：指从根节点到该节点的最长简单路径边的条数或者节点数（取决于深度从0开始还是从1开始）
+二叉树节点的高度：指从该节点到叶子节点的最长简单路径边的条数后者节点数（取决于高度从0开始还是从1开始）
+
+而根节点的高度就是二叉树的最大深度，所以本题中我们通过后序求的根节点高度来求的二叉树最大深度。
+104.二",
+        "wordCount": 730
     }
 </script>
 
@@ -387,20 +394,20 @@ HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种�
         
 <nav id="article-nav">
     
-        <a href="/2022/12/14/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2022/12/23/day17%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            349. 两个数组的交集 &amp; 202. 快乐数
+            day17第六章二叉树|110.平衡二叉树|257. 二叉树的所有路径|404.左叶子之和
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2022/12/14/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/23/day15%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">242.有效的字母异位词</p>
+        <p class="article-nav-title">day15第六章二叉树</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -596,7 +603,7 @@ HashMap的数据结构： 在Java编程语言中， 基本的结构就是两种�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/14/%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/';
+    var disqus_url = 'https://xduly.github.io/2022/12/23/day16%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/';
     
     (function() {
     var dsq = document.createElement('script');
