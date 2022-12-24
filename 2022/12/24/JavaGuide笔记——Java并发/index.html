@@ -6,25 +6,21 @@
     
 
     
-    <title>Java基础常见面试题总结 | LiuYi&#39;s BLog</title>
+    <title>JavaGuide笔记——Java并发 | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="一、Java概述1.Java 语言有哪些特点? 简单易学 面向对象（封装、多态、继承） 平台无关性（JVM实现平台无关性） 支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）注：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用std::th">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java基础常见面试题总结">
-<meta property="og:url" content="https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="JavaGuide笔记——Java并发">
+<meta property="og:url" content="https://xduly.github.io/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="一、Java概述1.Java 语言有哪些特点? 简单易学 面向对象（封装、多态、继承） 平台无关性（JVM实现平台无关性） 支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）注：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用std::th">
 <meta property="og:locale">
-<meta property="og:image" content="https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/image-20221222161758654.png">
-<meta property="article:published_time" content="2022-12-22T07:05:37.000Z">
-<meta property="article:modified_time" content="2022-12-22T15:20:56.244Z">
+<meta property="article:published_time" content="2022-12-23T18:50:12.000Z">
+<meta property="article:modified_time" content="2022-12-23T18:50:12.126Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/image-20221222161758654.png">
     
 
     
@@ -156,14 +152,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Java基础常见面试题总结" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-JavaGuide笔记——Java并发" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Java基础常见面试题总结
+        JavaGuide笔记——Java并发
         </h1>
     
 
@@ -174,16 +170,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" class="article-date">
-       <time datetime="2022-12-22T07:05:37.000Z" itemprop="datePublished">2022-12-22</time>
+    <a href="/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91/" class="article-date">
+       <time datetime="2022-12-23T18:50:12.000Z" itemprop="datePublished">2022-12-24</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" class="article-date">
-     <time datetime="2022-12-22T15:20:56.244Z" itemprop="dateModified">2022-12-22</time>
+  <a href="/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91/" class="article-date">
+     <time datetime="2022-12-23T18:50:12.126Z" itemprop="dateModified">2022-12-24</time>
   </a>
 </div>
 
@@ -205,63 +201,14 @@
 
             
 
-            <h1 id="一、Java概述"><a href="#一、Java概述" class="headerlink" title="一、Java概述"></a>一、Java概述</h1><h2 id="1-Java-语言有哪些特点"><a href="#1-Java-语言有哪些特点" class="headerlink" title="1.Java 语言有哪些特点?"></a>1.Java 语言有哪些特点?</h2><ul>
-<li>简单易学</li>
-<li>面向对象（封装、多态、继承）</li>
-<li>平台无关性（JVM实现平台无关性）</li>
-<li>支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）注：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用<code>std::thread</code>和<code>std::async</code>来创建线程</li>
-<li>健壮性（Java语言的强类型机制、异常处理、垃圾的自动收集等）  </li>
-<li>安全性</li>
-<li>支持网络编程并且很方便（ Java 语言诞生本身就是为简化网络编程设计的，因此 Java 语言不仅支持网络编程而且很方便）</li>
-<li>编译与解释并存；</li>
-</ul>
-<h3 id="引申1-什么是跨平台性？原理是什么"><a href="#引申1-什么是跨平台性？原理是什么" class="headerlink" title="引申1.什么是跨平台性？原理是什么"></a>引申1.什么是跨平台性？原理是什么</h3><p>所谓跨平台性，是指java语言编写的程序，一次编译后，可以在多个系统平台上运行。</p>
-<p>实现原理：Java程序是通过java虚拟机在系统平台上运行的，只要该系统可以安装相应的java虚拟机，<br>该系统就可以运行java程序。  </p>
-<h3 id="引申2-为什么说java是半编译半解释型语言？"><a href="#引申2-为什么说java是半编译半解释型语言？" class="headerlink" title="引申2.为什么说java是半编译半解释型语言？"></a>引申2.为什么说java是半编译半解释型语言？</h3><p>编译型语言的首先将<strong>源代码编译生成机器语言</strong>，再由<strong>机器运行机器码</strong>（二进制）。像C&#x2F;C++等都是编译型语言。<u>程序执行效率高，依赖编译器，跨平台性差些</u>，如C、C++、Delphi等。</p>
-<p>解释性语言在<strong>运行程序的时候才翻译</strong>，比如解释性basic语言，专门有一个解释器能够直接执行basic程序，<u>每个语句都是执行的时候才翻译，这样解释性语言每执行一次就要翻译一次，效率比较低</u>，如JavaScript、VBScript、Perl、Python、Ruby、MATLAB等等。</p>
-<p>Java不同于一般的编译语言和直译语言。它首先将源代码编译成字节码， 然后依赖各种不同平台上的虚拟机来解释执行字节码，从而实现了“一次编写，到处运行”的跨平台特性， 所以说java是一种半编译半解释型的语言。</p>
-<h2 id="2-JVM、JRE和JDK的关系"><a href="#2-JVM、JRE和JDK的关系" class="headerlink" title="2.JVM、JRE和JDK的关系"></a>2.JVM、JRE和JDK的关系</h2><p><strong>JVM</strong></p>
-<p>Java Virtual Machine是Java虚拟机，Java程序需要运行在虚拟机上，<strong>不同的平台有自己的虚拟机</strong>，因此<br>Java语言可以实现跨平台。</p>
-<p><strong>JRE</strong></p>
-<p>Java Runtime Environment包括<strong>Java虚拟机</strong>和<strong>Java程序所需的核心类库</strong>等。核心类库主要是java.lang<br>包：包含了运行Java程序必不可少的系统类，如基本数据类型、基本数学函数、字符串处理、线程、异<br>常处理类等，系统缺省加载这个包。</p>
-<p>如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</p>
-<p><strong>JDK</strong></p>
-<p>Java Development Kit是提供给Java开发人员使用的，其中包含了Java的开发工具，也包括了JRE。所以<br>安装了JDK，就无需再单独安装JRE了。其中的开发工 具：编译工具(javac.exe)，打包工具(jar.exe)等  </p>
-<h2 id="3-什么是字节码？采用字节码的好处是什么"><a href="#3-什么是字节码？采用字节码的好处是什么" class="headerlink" title="3.什么是字节码？采用字节码的好处是什么"></a>3.什么是字节码？采用字节码的好处是什么</h2><p><strong>字节码</strong>：Java源代码经过虚拟机编译器编译后产生的文件（即扩展为.class的文 件），它<strong>不面向任何特</strong><br><strong>定的处理器</strong>，<strong>只面向虚拟机</strong>。</p>
-<p><strong>采用字节码的好处</strong>：</p>
-<p>Java语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以Java程序运行时比较高效， 而且，由于字节码并不专对一种特定的机器，因此，Java程序无须重新编译便可在多种不同的计算机上运行。  </p>
-<p>Java中引入了虚拟机的概念，即在机器和编译程序之间加入了一层抽象的虚拟机器。这台虚拟的机器在任何平台上都提供给编译程序一个的共同的接口。编译程序只需要面向虚拟机，生成虚拟机能够理解的代码，然后由解释器来将虚拟机代 码转换为特定系统的机器码执行。在Java中，这种供虚拟机理解的代码叫做字节码（即扩展为.class的文件），它不面向任何特定的处理器，只面向虚拟机。</p>
-<p>每一种平台的解释器是不同的，但是实现的虚拟机是相同的。Java源程序经过编译器编译后变成字节码，字节码由虚拟机解释执行，虚拟机将每一条要执行的字节 码送给解释器，解释器将其翻译成特定机器上的机器码，然后在特定的机器上运行，这就是上面提到的Java的特点的编译与解释并存的解释。  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java源代码----&gt;编译器----&gt;jvm可执行的Java字节码文件(即虚拟指令)----&gt;jvm----&gt;jvm中解释器-----&gt;机器可执行的二进制机器码----&gt;程序运行。  </span><br></pre></td></tr></table></figure>
-
-<p>需要格外注意的是 <code>.class-&gt;机器码</code> 这一步。在这一步 <strong>JVM 类加载器首先加载字节码文件</strong>，然后通过<strong>解释器逐行解释执行</strong>，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT（just-in-time compilation） 编译器，而 <strong>JIT 属于运行时编译</strong>。</p>
-<p>当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 <strong>Java 是编译与解释共存的语言</strong> 。</p>
-<p>解释器的工作机制如下：</p>
-<img src="/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/image-20221222161758654.png" alt="image-20221222161758654" style="zoom:50%;">
-
-<p>JIT运行时编译器工作机制：</p>
-<img src="/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/image-20221222161929553.png" alt="image-20221222161929553" style="zoom:50%;">
-
-<p>HotSpot虚拟机 采用了<strong>惰性评估</strong>(Lazy Evaluation)的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。<strong>JIT针对热点代码，进行编译与深度优化</strong>，优化后的机器码会被缓存起来，存入<strong>CodeCache</strong>中。对于非热点代码，例如只运行一次的代码（类构造器等等），直接解释执行，更加快速。JIT不仅花更多时间去编译优化，而且还多耗费了很多内存，并且 <strong>CodeCache 发生变化会发生部分或者所有线程进入 Safepoint 导致 Stop the world</strong>。</p>
-<p>字节码转换为可执行的机器码，大小会大很多很多倍。这也是为啥，解释器每次都要翻译并且执行，JIT只针对热点代码进行编译优化的原因。</p>
-<p>JDK 9 引入了一种新的编译模式 AOT(Ahead of Time Compilation)，它是<strong>直接将字节码编译成机器码</strong>，这样就避免了 JIT 预热等各方面的开销。JDK 支持分层编译和 AOT 协作使用。但是，AOT 编译器的编译质量是肯定比不上 JIT 编译器的 。</p>
-<h2 id="4-Java和C-的区别"><a href="#4-Java和C-的区别" class="headerlink" title="4.Java和C++的区别"></a>4.Java和C++的区别</h2><ul>
-<li>都是面向对象的语言，都支持封装、继承和多态</li>
-<li>Java不提供指针来直接访问内存，程序内存更加安全</li>
-<li>Java的类是单继承的，C++支持多重继承；虽然Java的类不可以多继承，但是接口可以多继承。</li>
-<li>Java有自动内存管理机制，不需要程序员手动释放无用内存</li>
-</ul>
-<h2 id="5-基础语法"><a href="#5-基础语法" class="headerlink" title="5.基础语法"></a>5.基础语法</h2><h3 id="（1）关键字和标识符的区别"><a href="#（1）关键字和标识符的区别" class="headerlink" title="（1）关键字和标识符的区别"></a>（1）关键字和标识符的区别</h3><p>在我们编写程序的时候，需要大量地为程序、类、变量、方法等取名字，于是就有了 <strong>标识符</strong> 。简单来说， <strong>标识符就是一个名字</strong> 。</p>
-<p>有一些标识符，Java 语言已经赋予了其特殊的含义，只能用于特定的地方，这些特殊的标识符就是 <strong>关键字</strong> 。简单来说，<strong>关键字是被赋予特殊含义的标识</strong>符 。</p>
-<p>虽然 <code>true</code>, <code>false</code>, 和 <code>null</code> 看起来像关键字但实际上他们是字面值，同时你也不可以作为标识符来使用。</p>
-
+            
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" data-id="clc1n0lgh000n0gonaogidxkn" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91/" data-id="clc1n0lgh000m0gon0zib8c1q" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -331,20 +278,16 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "Java基础常见面试题总结",
-        "image": "https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/image-20221222161758654.png",
+        "headline": "JavaGuide笔记——Java并发",
+        "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-22",
-        "dateCreated": "2022-12-22",
-        "dateModified": "2022-12-22",
-        "url": "https://xduly.github.io/2022/12/22/Java基础常见面试题总结/",
-        "description": "一、Java概述1.Java 语言有哪些特点?
-简单易学
-面向对象（封装、多态、继承）
-平台无关性（JVM实现平台无关性）
-支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）注：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用std::th",
-        "wordCount": 144
+        "datePublished": "2022-12-24",
+        "dateCreated": "2022-12-24",
+        "dateModified": "2022-12-24",
+        "url": "https://xduly.github.io/2022/12/24/JavaGuide笔记——Java并发/",
+        "description": "",
+        "wordCount": 1
     }
 </script>
 
@@ -425,20 +368,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2022/12/22/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94JVM/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
-            Java集合常见面试题总结
+            JavaGuide笔记——JVM
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2022/12/19/151-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/23/day17%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">151.翻转字符串里的单词</p>
+        <p class="article-nav-title">day17第六章二叉树|110.平衡二叉树|257. 二叉树的所有路径|404.左叶子之和</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -634,7 +577,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/22/Java%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/';
+    var disqus_url = 'https://xduly.github.io/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java%E5%B9%B6%E5%8F%91/';
     
     (function() {
     var dsq = document.createElement('script');
