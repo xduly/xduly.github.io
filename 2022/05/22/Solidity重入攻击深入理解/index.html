@@ -6,21 +6,21 @@
     
 
     
-    <title>LiuYi&#39;s BLog</title>
+    <title>Solidity重入攻击深入理解 | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="Solidity重入攻击深入理解重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract baby">
+    <meta name="description" content="重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract babybank &amp;#123;    m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LiuYi&#39;s BLog">
-<meta property="og:url" content="https://xduly.github.io/2022/12/07/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/index.html">
+<meta property="og:title" content="Solidity重入攻击深入理解">
+<meta property="og:url" content="https://xduly.github.io/2022/05/22/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="Solidity重入攻击深入理解重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract baby">
+<meta property="og:description" content="重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract babybank &amp;#123;    m">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-12-07T06:25:54.966Z">
-<meta property="article:modified_time" content="2022-07-19T08:39:57.638Z">
+<meta property="article:published_time" content="2022-05-22T07:05:37.000Z">
+<meta property="article:modified_time" content="2022-12-24T18:39:12.486Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
     
@@ -84,13 +84,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inicio</a>
+                                    <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
                                     
                                 
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Acerca de</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
                                 </li>
                             
                         </ul>
@@ -98,7 +98,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -117,10 +117,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -149,7 +149,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sin categoría
+    Sense categoria
     </h1>
 </div>
 
@@ -157,21 +157,31 @@
                             <article id="post-Solidity重入攻击深入理解" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Solidity重入攻击深入理解
+        </h1>
+    
+
+            </header>
+        
         
             <div class="article-meta">
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/07/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" class="article-date">
-       <time datetime="2022-12-07T06:25:54.966Z" itemprop="datePublished">2022-12-07</time>
+    <a href="/2022/05/22/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" class="article-date">
+       <time datetime="2022-05-22T07:05:37.000Z" itemprop="datePublished">2022-05-22</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/07/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" class="article-date">
-     <time datetime="2022-07-19T08:39:57.638Z" itemprop="dateModified">2022-07-19</time>
+  <a href="/2022/05/22/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" class="article-date">
+     <time datetime="2022-12-24T18:39:12.486Z" itemprop="dateModified">2022-12-25</time>
   </a>
 </div>
 
@@ -193,7 +203,7 @@
 
             
 
-            <h1 id="Solidity重入攻击深入理解"><a href="#Solidity重入攻击深入理解" class="headerlink" title="Solidity重入攻击深入理解"></a>Solidity重入攻击深入理解</h1><h2 id="重入攻击漏洞代码"><a href="#重入攻击漏洞代码" class="headerlink" title="重入攻击漏洞代码"></a>重入攻击漏洞代码</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^<span class="number">0.4</span><span class="number">.23</span>;</span><br><span class="line"></span><br><span class="line">contract babybank <span class="punctuation">&#123;</span></span><br><span class="line">    mapping(address =&gt; uint) public level;<span class="comment">//奖励等级</span></span><br><span class="line">    mapping(address =&gt; uint) public balance;<span class="comment">//奖励点</span></span><br><span class="line">    address owner;<span class="comment">//当前合约调用者（智能合约）</span></span><br><span class="line">    uint secret;<span class="comment">//密码</span></span><br><span class="line">    </span><br><span class="line">    event sendflag(string md5ofteamtoken<span class="punctuation">,</span>string b64email); </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//构造函数，初始化该合约的owner</span></span><br><span class="line">    constructor()public<span class="punctuation">&#123;</span></span><br><span class="line">        owner = msg.sender;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//pay for flag</span></span><br><span class="line">    function payforflag(string md5ofteamtoken<span class="punctuation">,</span>string b64email) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= <span class="number">10000000000</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>=<span class="number">0</span>;</span><br><span class="line">		<span class="comment">//transfer用于访问合约者向owner发送以太币</span></span><br><span class="line">		<span class="comment">//this指的是当前的访问者对象</span></span><br><span class="line">        owner.transfer(address(this).balance);</span><br><span class="line">        emit sendflag(md5ofteamtoken<span class="punctuation">,</span>b64email);</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">	<span class="comment">//modifier即函数的修改器，可以用来改变一个函数的行为，控制函数的逻辑。修改器是一种合约属性，可以被继承和重写。</span></span><br><span class="line">	<span class="comment">//下划线_是一个占位符，代表了执行函数接下来的代码。</span></span><br><span class="line">	<span class="comment">//定义了一个modifier onlyowner，用于限定具体的操作只有owner才能访问。</span></span><br><span class="line">    modifier onlyOwner()<span class="punctuation">&#123;</span></span><br><span class="line">        require(msg.sender == owner);</span><br><span class="line">        _;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 1 </span></span><br><span class="line">	<span class="comment">//profit()用于匹配账户地址，只有地址末位是0xb1b1的，才能获得奖励和层级提升。</span></span><br><span class="line">    function profit() public<span class="punctuation">&#123;</span></span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">0</span>);</span><br><span class="line">        require(uint(msg.sender) &amp; <span class="number">0xffff</span>==<span class="number">0xb1b1</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">        level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 2</span></span><br><span class="line">	<span class="comment">//set_secret()只能被合约的owner调用，用于设置或修改密码；</span></span><br><span class="line">    function set_secret(uint new_secret) public onlyOwner<span class="punctuation">&#123;</span></span><br><span class="line">        secret=new_secret;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">	<span class="comment">//guess()则为该合约的访问账户调用，如果猜对了owner设置的密码，且该账户的层级是1，就会获得奖励1，并层级跃迁一级。</span></span><br><span class="line">    function guess(uint guess_secret) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(guess_secret==secret);</span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">1</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">        level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 3</span></span><br><span class="line">	<span class="comment">//transfer()在访问者账户里奖励数额够，且层级达到2的情况下，将2个奖励点，转给指定的其它账户</span></span><br><span class="line">    function transfer(address to<span class="punctuation">,</span> uint amount) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= amount);</span><br><span class="line">        require(amount==<span class="number">2</span>);</span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">2</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> = <span class="number">0</span>;</span><br><span class="line">        balance<span class="punctuation">[</span>to<span class="punctuation">]</span> = amount;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">	<span class="comment">//withdraw()从访问者账户抽取奖励点（amount是拥有的奖励点数）</span></span><br><span class="line">    function withdraw(uint amount) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(amount==<span class="number">2</span>);</span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= amount);</span><br><span class="line">		<span class="comment">//给当前合约调用者转账amount*100000000000000</span></span><br><span class="line">        msg.sender.call.value(amount*<span class="number">100000000000000</span>)();</span><br><span class="line">		<span class="comment">//当前合约调用者的奖励点-2</span></span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> -= amount;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+            <h2 id="重入攻击漏洞代码"><a href="#重入攻击漏洞代码" class="headerlink" title="重入攻击漏洞代码"></a>重入攻击漏洞代码</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^<span class="number">0.4</span><span class="number">.23</span>;</span><br><span class="line"></span><br><span class="line">contract babybank <span class="punctuation">&#123;</span></span><br><span class="line">    mapping(address =&gt; uint) public level;<span class="comment">//奖励等级</span></span><br><span class="line">    mapping(address =&gt; uint) public balance;<span class="comment">//奖励点</span></span><br><span class="line">    address owner;<span class="comment">//当前合约调用者（智能合约）</span></span><br><span class="line">    uint secret;<span class="comment">//密码</span></span><br><span class="line">    </span><br><span class="line">    event sendflag(string md5ofteamtoken<span class="punctuation">,</span>string b64email); </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//构造函数，初始化该合约的owner</span></span><br><span class="line">    constructor()public<span class="punctuation">&#123;</span></span><br><span class="line">        owner = msg.sender;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//pay for flag</span></span><br><span class="line">    function payforflag(string md5ofteamtoken<span class="punctuation">,</span>string b64email) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= <span class="number">10000000000</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>=<span class="number">0</span>;</span><br><span class="line">		<span class="comment">//transfer用于访问合约者向owner发送以太币</span></span><br><span class="line">		<span class="comment">//this指的是当前的访问者对象</span></span><br><span class="line">        owner.transfer(address(this).balance);</span><br><span class="line">        emit sendflag(md5ofteamtoken<span class="punctuation">,</span>b64email);</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">	<span class="comment">//modifier即函数的修改器，可以用来改变一个函数的行为，控制函数的逻辑。修改器是一种合约属性，可以被继承和重写。</span></span><br><span class="line">	<span class="comment">//下划线_是一个占位符，代表了执行函数接下来的代码。</span></span><br><span class="line">	<span class="comment">//定义了一个modifier onlyowner，用于限定具体的操作只有owner才能访问。</span></span><br><span class="line">    modifier onlyOwner()<span class="punctuation">&#123;</span></span><br><span class="line">        require(msg.sender == owner);</span><br><span class="line">        _;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 1 </span></span><br><span class="line">	<span class="comment">//profit()用于匹配账户地址，只有地址末位是0xb1b1的，才能获得奖励和层级提升。</span></span><br><span class="line">    function profit() public<span class="punctuation">&#123;</span></span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">0</span>);</span><br><span class="line">        require(uint(msg.sender) &amp; <span class="number">0xffff</span>==<span class="number">0xb1b1</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">        level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 2</span></span><br><span class="line">	<span class="comment">//set_secret()只能被合约的owner调用，用于设置或修改密码；</span></span><br><span class="line">    function set_secret(uint new_secret) public onlyOwner<span class="punctuation">&#123;</span></span><br><span class="line">        secret=new_secret;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">	<span class="comment">//guess()则为该合约的访问账户调用，如果猜对了owner设置的密码，且该账户的层级是1，就会获得奖励1，并层级跃迁一级。</span></span><br><span class="line">    function guess(uint guess_secret) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(guess_secret==secret);</span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">1</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">        level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>+=<span class="number">1</span>;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//challenge 3</span></span><br><span class="line">	<span class="comment">//transfer()在访问者账户里奖励数额够，且层级达到2的情况下，将2个奖励点，转给指定的其它账户</span></span><br><span class="line">    function transfer(address to<span class="punctuation">,</span> uint amount) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= amount);</span><br><span class="line">        require(amount==<span class="number">2</span>);</span><br><span class="line">        require(level<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span>==<span class="number">2</span>);</span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> = <span class="number">0</span>;</span><br><span class="line">        balance<span class="punctuation">[</span>to<span class="punctuation">]</span> = amount;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">	<span class="comment">//withdraw()从访问者账户抽取奖励点（amount是拥有的奖励点数）</span></span><br><span class="line">    function withdraw(uint amount) public<span class="punctuation">&#123;</span></span><br><span class="line">        require(amount==<span class="number">2</span>);</span><br><span class="line">        require(balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> &gt;= amount);</span><br><span class="line">		<span class="comment">//给当前合约调用者转账amount*100000000000000</span></span><br><span class="line">        msg.sender.call.value(amount*<span class="number">100000000000000</span>)();</span><br><span class="line">		<span class="comment">//当前合约调用者的奖励点-2</span></span><br><span class="line">        balance<span class="punctuation">[</span>msg.sender<span class="punctuation">]</span> -= amount;</span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>该合约的意义：访问合约的账户想要得到flag，但要确保其账户的奖励点要超过10000000000;但这些账户想要获得奖励点，就要通过三大挑战：</p>
 <p>关键在于withdraw函数，他可能会触发以下两行：</p>
@@ -235,7 +245,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/07/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" data-id="clc2a0app000pgson2kuu1z4b" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/05/22/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/" data-id="clc2aefqz000qekon5sxsdf58" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -305,16 +315,16 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        
+        "headline": "Solidity重入攻击深入理解",
         "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-07",
-        "dateCreated": "2022-12-07",
-        "dateModified": "2022-07-19",
-        "url": "https://xduly.github.io/2022/12/07/Solidity重入攻击深入理解/",
-        "description": "Solidity重入攻击深入理解重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract baby",
-        "wordCount": 1769
+        "datePublished": "2022-05-22",
+        "dateCreated": "2022-05-22",
+        "dateModified": "2022-12-25",
+        "url": "https://xduly.github.io/2022/05/22/Solidity重入攻击深入理解/",
+        "description": "重入攻击漏洞代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374pragma solidity ^0.4.23;contract babybank &#123;    m",
+        "wordCount": 1765
     }
 </script>
 
@@ -396,7 +406,7 @@
 <nav id="article-nav">
     
         <a href="/2022/12/07/704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">más nuevo</strong>
+        <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
             (no title)
@@ -417,7 +427,7 @@
             
                 
     <div class="widget-wrap">
-        <h3 class="widget-title">recientes</h3>
+        <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -531,9 +541,9 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archivos</h3>
+        <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">35</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -598,7 +608,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/07/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/';
+    var disqus_url = 'https://xduly.github.io/2022/05/22/Solidity%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/';
     
     (function() {
     var dsq = document.createElement('script');
