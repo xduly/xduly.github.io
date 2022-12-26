@@ -6,23 +6,25 @@
     
 
     
-    <title>day13栈与队列|239. 滑动窗口最大值|347.前 K 个高频元素 | LiuYi&#39;s BLog</title>
+    <title>功能实现——登录（加盐） | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="239. 滑动窗口最大值希望实现一个数据结构，能实现以下功能： 滑动窗口每移动一位，有：  push（）滑动窗口最左边要移除的元素 pop（）滑动窗口最右边要添加的元素 getMax（）返回当前滑动窗口中的最大一个元素  可以维护这样一个单调队列：将当前滑动窗口中的元素push（），如果当前元素比队列前面的元素都大，则pop()该元素之前的所有元素。这样可以保证滑动窗口的最大值永远都在队头。 需要">
+    <meta name="description" content="异常 登录加盐手动加密（md5+随机字符串） md5是不可逆加密，md5相同的密码每次加密都一样，不太安全。在md5的基础上手动加盐（salt）处理 注册-&gt;生成盐  登录-&gt;使用盐来配合验证  逻辑分析： 1，用户输入了用户名和密码进行登录，校验成功后返回jwt(基于当前用户的id生成) 2，用户游客登录，生成jwt返回(基于默认值0生成)  JSON Web Token (JWT)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day13栈与队列|239. 滑动窗口最大值|347.前 K 个高频元素">
-<meta property="og:url" content="https://xduly.github.io/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/index.html">
+<meta property="og:title" content="功能实现——登录（加盐）">
+<meta property="og:url" content="https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="239. 滑动窗口最大值希望实现一个数据结构，能实现以下功能： 滑动窗口每移动一位，有：  push（）滑动窗口最左边要移除的元素 pop（）滑动窗口最右边要添加的元素 getMax（）返回当前滑动窗口中的最大一个元素  可以维护这样一个单调队列：将当前滑动窗口中的元素push（），如果当前元素比队列前面的元素都大，则pop()该元素之前的所有元素。这样可以保证滑动窗口的最大值永远都在队头。 需要">
+<meta property="og:description" content="异常 登录加盐手动加密（md5+随机字符串） md5是不可逆加密，md5相同的密码每次加密都一样，不太安全。在md5的基础上手动加盐（salt）处理 注册-&gt;生成盐  登录-&gt;使用盐来配合验证  逻辑分析： 1，用户输入了用户名和密码进行登录，校验成功后返回jwt(基于当前用户的id生成) 2，用户游客登录，生成jwt返回(基于默认值0生成)  JSON Web Token (JWT)">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-12-23T04:38:59.000Z">
-<meta property="article:modified_time" content="2022-12-23T08:03:55.943Z">
+<meta property="og:image" content="https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226004446536.png">
+<meta property="article:published_time" content="2022-12-25T16:44:25.000Z">
+<meta property="article:modified_time" content="2022-12-26T12:39:22.943Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226004446536.png">
     
 
     
@@ -154,14 +156,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-day13栈与队列" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-功能实现——登录（加盐）" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        day13栈与队列|239. 滑动窗口最大值|347.前 K 个高频元素
+        功能实现——登录（加盐）
         </h1>
     
 
@@ -172,16 +174,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="article-date">
-       <time datetime="2022-12-23T04:38:59.000Z" itemprop="datePublished">2022-12-23</time>
+    <a href="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/" class="article-date">
+       <time datetime="2022-12-25T16:44:25.000Z" itemprop="datePublished">2022-12-26</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="article-date">
-     <time datetime="2022-12-23T08:03:55.943Z" itemprop="dateModified">2022-12-23</time>
+  <a href="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/" class="article-date">
+     <time datetime="2022-12-26T12:39:22.943Z" itemprop="dateModified">2022-12-26</time>
   </a>
 </div>
 
@@ -203,24 +205,69 @@
 
             
 
-            <h1 id="239-滑动窗口最大值"><a href="#239-滑动窗口最大值" class="headerlink" title="239. 滑动窗口最大值"></a>239. 滑动窗口最大值</h1><p>希望实现一个数据结构，能实现以下功能：</p>
-<p>滑动窗口每移动一位，有：</p>
+            <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p><img src="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226004446536.png" alt="image-20221226004446536"></p>
+<h2 id="登录加盐"><a href="#登录加盐" class="headerlink" title="登录加盐"></a>登录加盐</h2><p>手动加密（md5+随机字符串）</p>
+<p>md5是不可逆加密，md5相同的密码每次加密都一样，不太安全。在md5的基础上手动加盐（salt）处理</p>
+<p>注册-&gt;生成盐</p>
+<p><img src="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226010148155.png" alt="image-20221226010148155"></p>
+<p>登录-&gt;使用盐来配合验证</p>
+<p><img src="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226010114386.png" alt="image-20221226010114386"></p>
+<p>逻辑分析：</p>
+<p>1，用户输入了用户名和密码进行登录，校验成功后返回jwt(基于当前用户的id生成)</p>
+<p>2，用户游客登录，生成jwt返回(基于默认值0生成)</p>
 <ul>
-<li>push（）滑动窗口最左边要移除的元素</li>
-<li>pop（）滑动窗口最右边要添加的元素</li>
-<li>getMax（）返回当前滑动窗口中的最大一个元素</li>
+<li><strong>JSON Web Token</strong> (JWT)是一个开放标准 (RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为JSON对象在各方之间安全地传输信息。. 该信息可以被验证和信任，因为它是数字签名的。</li>
+<li>mybais-plus逆向生成对应的实体类</li>
 </ul>
-<p>可以维护这样一个单调队列：将当前滑动窗口中的元素push（），如果当前元素比队列前面的元素都大，则pop()该元素之前的所有元素。这样可以保证滑动窗口的最大值永远都在队头。</p>
-<p>需要注意的是：</p>
+<h2 id="全局过滤器实现jwt校验"><a href="#全局过滤器实现jwt校验" class="headerlink" title="全局过滤器实现jwt校验"></a>全局过滤器实现jwt校验</h2><p><img src="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226171720999.png" alt="image-20221226171720999"></p>
+<p>思路分析：</p>
+<ol>
+<li>用户进入网关开始登陆，网关过滤器进行判断，如果是登录，则路由到后台管理微服务进行登录</li>
+<li>用户登录成功，后台管理微服务签发JWT TOKEN信息返回给用户</li>
+<li>用户再次进入网关开始访问，网关过滤器接收用户携带的TOKEN </li>
+<li>网关过滤器解析TOKEN ，判断是否有权限，如果有，则放行，如果没有则返回未认证错误</li>
+</ol>
+<h2 id="JWT和Token的区别（转载）"><a href="#JWT和Token的区别（转载）" class="headerlink" title="JWT和Token的区别（转载）"></a>JWT和Token的区别（转载）</h2><p>相同：token和jwt都是用来访问资源的令牌凭证，需要验证来确定身份信息</p>
+<p><strong>token的验证机制流程：</strong></p>
+<p>1.用户输入账户和密码请求服务器</p>
+<p>2.服务器验证用户信息，返回用户一个token值</p>
+<p>3.客户端存储token值，在每次请求都提交token值</p>
+<p>4.服务器根据token验证用户信息，验证通过后返回请求结果</p>
+<p>token必须要在每次请求时传递给服务端，都保存在header中</p>
+<p>缺点：</p>
+<p>1.内存级别重启全部失效</p>
+<p>2.时效性，无法失效，被非法获取之后可以一直使用</p>
+<p>3.集群部署，多台服务器无法共享，在负载会导致用户状态不同步</p>
+<p><strong>JWT（Json Web Token）</strong></p>
+<p>JWT是由三段信息构成的，将这三段信息文本用.链接一起就构成了jwt字符串，第一部分我们称它为头部（header),第二部分我们称其为载荷（payload, 类似于飞机上承载的物品)，第三部分是签证（signature)。</p>
+<p>1.header</p>
+<p>jwt的头部承载两部分信息：</p>
 <ul>
-<li>该自定义队列中维护的不是滑动窗口中所有元素，而是最有可能成为最大元素的元素</li>
-<li>队列中poll（val）操作只是当队列不为空且队头值等于val的时候，才从队头弹出元素</li>
-<li>队列中add(val)操作时，当队列不为空，且val大于队尾元素的时候，会将队尾元素依次弹出，直到队列为空或者遇到比val大的队尾元素才停止。</li>
+<li>声明类型，这里是jwt</li>
+<li>声明加密的算法 通常直接使用 HMAC SHA256</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义队列，</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span>&#123;</span><br><span class="line">    <span class="comment">//LinkedList实现了Deque接口</span></span><br><span class="line">    Deque&lt;Integer&gt; queue = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//添加元素时，如果要添加的元素大于入口处的元素，就将入口元素弹出</span></span><br><span class="line">    <span class="comment">//保证队列元素单调递减</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty() &amp;&amp; val &gt; queue.peekLast())&#123;</span><br><span class="line">            queue.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        queue.add(val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//弹出元素时，比较当前要弹出的数值是否等于队列出口的数值，如果相等则弹出</span></span><br><span class="line">    <span class="comment">//同时判断队列当前是否为空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( !queue.isEmpty() &amp;&amp; val == queue.peek())&#123;</span><br><span class="line">            queue.removeFirst();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//最大值始终在队头</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> queue.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] maxSlidingWindow(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> nums;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//滑动窗口要移动的长度，也即结果数组的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length - k + <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        <span class="comment">//将滑动窗口的初始元素加入自定义队列</span></span><br><span class="line">        <span class="type">MyQueue</span> <span class="variable">queue</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyQueue</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i &lt;k ;i++)&#123;</span><br><span class="line">            queue.add(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//结果数组</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        res[index++] = queue.peek();</span><br><span class="line">        <span class="comment">//移动滑动窗口</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> k ; i&lt;nums.length ;i++)&#123;</span><br><span class="line">            queue.poll(nums[i-k]);</span><br><span class="line">            queue.add(nums[i]);</span><br><span class="line">            res[index++] = queue.peek();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="347-前-K-个高频元素"><a href="#347-前-K-个高频元素" class="headerlink" title="347.前 K 个高频元素"></a>347.前 K 个高频元素</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] topKFrequent(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> num : nums)&#123;</span><br><span class="line">            map.put(num,map.getOrDefault(num,<span class="number">0</span>)+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//基于大顶堆的优先队列</span></span><br><span class="line">        PriorityQueue&lt;<span class="type">int</span>[]&gt; pq = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;((num1,num2)-&gt;num2[<span class="number">1</span>]-num1[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">for</span>(Map.Entry&lt;Integer,Integer&gt; entry : map.entrySet())&#123;</span><br><span class="line">            pq.add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;entry.getKey(),entry.getValue()&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[k];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i&lt;k ; i++)&#123;</span><br><span class="line">            res[i] = pq.poll()[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>将头部进行base64加密（该加密是可以对称解密的),构成了第一部分。</p>
+<p>2.playload</p>
+<p>载荷就是存放有效信息的地方。这个名字像是特指飞机上承载的货品，这些有效信息包含三个部分</p>
+<p>标准中注册的声明</p>
+<p>公共的声明</p>
+<p>私有的声明</p>
+<p>3.signature</p>
+<p>jwt的第三部分是一个签证信息，这个签证信息由三部分组成：</p>
+<p>header (base64后的)</p>
+<p>payload (base64后的)</p>
+<p>secret</p>
+<p>这个部分需要base64加密后的header和base64加密后的payload使用，连接组成的字符串，然后通过header中声明的加密方式进行secret组合加密，然后就构成了jwt的第三部分。</p>
+<p>secret是保存在服务器端的，jwt的签发生成也是在服务器端的，secret就是用来进行jwt的签发和jwt的验证，所以，它就是你服务端的私钥，在任何场景都不应该流露出去。一旦客户端得知这个secret, 那就意味着客户端是可以自我签发jwt了</p>
+<p>最后将这三部分连接成一个完整的字符串,构成了最终的jwt</p>
+<p><strong>JWT（Json Web Token）-Token</strong></p>
+<p>1.JWT生成的token是无状态的，服务端不存储，即一旦生成在有效期之前一直可用，无法销毁</p>
+<p>2.如果需要刷新token有效期或者提前失效需要借助缓存、数据库或者redis来自己实现对应逻辑</p>
+<p>3.JWT无状态&#x3D;&gt;不需要通过存储验证是否正确，本身可以验证</p>
+<p>4.手动销毁：必须借助于第三方类似黑名单的方式&#x3D;&gt; 把检测到的非法token添加到黑名单中，每次验证token是否有效要先过黑名单，如果存在黑名单中直接拒绝</p>
+<p>5.由于json的通用性，所以JWT是可以进行跨语言支持的</p>
+<hr>
+<p>版权声明：本文为CSDN博主「过街的老鼠」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51212267/article/details/121345316">https://blog.csdn.net/m0_51212267/article/details/121345316</a></p>
 
         </div>
         <footer class="article-footer">
@@ -228,7 +275,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" data-id="clc4x037b000pooonffua6dl0" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/" data-id="clc4x037m0010ooon0t1o6123" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -298,24 +345,27 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "day13栈与队列|239. 滑动窗口最大值|347.前 K 个高频元素",
-        "image": "https://xduly.github.io",
+        "headline": "功能实现——登录（加盐）",
+        "image": "https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/image-20221226004446536.png",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-23",
-        "dateCreated": "2022-12-23",
-        "dateModified": "2022-12-23",
-        "url": "https://xduly.github.io/2022/12/23/day13栈与队列/",
-        "description": "239. 滑动窗口最大值希望实现一个数据结构，能实现以下功能：
-滑动窗口每移动一位，有：
+        "datePublished": "2022-12-26",
+        "dateCreated": "2022-12-26",
+        "dateModified": "2022-12-26",
+        "url": "https://xduly.github.io/2022/12/26/功能实现——登录（加盐）/",
+        "description": "异常
+登录加盐手动加密（md5+随机字符串）
+md5是不可逆加密，md5相同的密码每次加密都一样，不太安全。在md5的基础上手动加盐（salt）处理
+注册-&gt;生成盐
 
-push（）滑动窗口最左边要移除的元素
-pop（）滑动窗口最右边要添加的元素
-getMax（）返回当前滑动窗口中的最大一个元素
+登录-&gt;使用盐来配合验证
 
-可以维护这样一个单调队列：将当前滑动窗口中的元素push（），如果当前元素比队列前面的元素都大，则pop()该元素之前的所有元素。这样可以保证滑动窗口的最大值永远都在队头。
-需要",
-        "wordCount": 837
+逻辑分析：
+1，用户输入了用户名和密码进行登录，校验成功后返回jwt(基于当前用户的id生成)
+2，用户游客登录，生成jwt返回(基于默认值0生成)
+
+JSON Web Token (JWT)",
+        "wordCount": 49
     }
 </script>
 
@@ -396,20 +446,20 @@ getMax（）返回当前滑动窗口中的最大一个元素
         
 <nav id="article-nav">
     
-        <a href="/2022/12/23/day14%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2022/12/26/day20%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
-            day14第六章二叉树
+            day20第六章二叉树
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2022/12/22/IO%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/25/day18%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">JavaGuide笔记——Java IO知识总结</p>
+        <p class="article-nav-title">day18第六章二叉树</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -605,7 +655,7 @@ getMax（）返回当前滑动窗口中的最大一个元素
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/23/day13%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/';
+    var disqus_url = 'https://xduly.github.io/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/';
     
     (function() {
     var dsq = document.createElement('script');
