@@ -20,7 +20,7 @@
 <meta property="og:description" content="654. 最大二叉树12345678910111213141516171819202122232425class Solution &amp;#123;    public TreeNode constructMaximumBinaryTree(int[] nums) &amp;#123;                TreeNode root &#x3D; traversal(0,nums.length,nums);">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-12-26T13:17:48.000Z">
-<meta property="article:modified_time" content="2022-12-26T13:53:04.179Z">
+<meta property="article:modified_time" content="2023-01-01T08:57:43.870Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
     
@@ -181,7 +181,7 @@
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2022/12/26/day20%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
-     <time datetime="2022-12-26T13:53:04.179Z" itemprop="dateModified">2022-12-26</time>
+     <time datetime="2023-01-01T08:57:43.870Z" itemprop="dateModified">2023-01-01</time>
   </a>
 </div>
 
@@ -209,7 +209,8 @@
 
 <h1 id="700-二叉搜索树中的搜索"><a href="#700-二叉搜索树中的搜索" class="headerlink" title="700. 二叉搜索树中的搜索"></a>700. 二叉搜索树中的搜索</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">searchBST</span><span class="params">(TreeNode root, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> traversal(root,val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> TreeNode <span class="title function_">traversal</span><span class="params">(TreeNode root, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span> )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(root.val == val)&#123;</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(root.val &gt; val)&#123;</span><br><span class="line">            <span class="keyword">return</span> traversal(root.left,val);</span><br><span class="line">            </span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> traversal(root.right,val);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="98-验证二叉搜索树"><a href="#98-验证二叉搜索树" class="headerlink" title="98.验证二叉搜索树"></a>98.验证二叉搜索树</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 递归</span></span><br><span class="line">    TreeNode max;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValidBST</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">left</span> <span class="operator">=</span> isValidBST(root.left);</span><br><span class="line">        <span class="keyword">if</span> (!left) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 中</span></span><br><span class="line">        <span class="keyword">if</span> (max != <span class="literal">null</span> &amp;&amp; root.val &lt;= max.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        max = root;</span><br><span class="line">        <span class="comment">// 右</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">right</span> <span class="operator">=</span> isValidBST(root.right);</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="98-验证二叉搜索树"><a href="#98-验证二叉搜索树" class="headerlink" title="98.验证二叉搜索树"></a>98.验证二叉搜索树</h1><p>直观思路：中序遍历二叉树，判断遍历结果是否是单调递增的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 递归</span></span><br><span class="line">    TreeNode max;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValidBST</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">left</span> <span class="operator">=</span> isValidBST(root.left);</span><br><span class="line">        <span class="keyword">if</span> (!left) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 中</span></span><br><span class="line">        <span class="keyword">if</span> (max != <span class="literal">null</span> &amp;&amp; root.val &lt;= max.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        max = root;</span><br><span class="line">        <span class="comment">// 右</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">right</span> <span class="operator">=</span> isValidBST(root.right);</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -218,7 +219,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/26/day20%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clc4x037l000zooon7blfdeqy" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2022/12/26/day20%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clcd8hwvp000ycoong8e124nv" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -294,7 +295,7 @@
         "genre": "",
         "datePublished": "2022-12-26",
         "dateCreated": "2022-12-26",
-        "dateModified": "2022-12-26",
+        "dateModified": "2023-01-01",
         "url": "https://xduly.github.io/2022/12/26/day20第六章二叉树/",
         "description": "654. 最大二叉树12345678910111213141516171819202122232425class Solution &#123;    public TreeNode constructMaximumBinaryTree(int[] nums) &#123;                TreeNode root = traversal(0,nums.length,nums); ",
         "wordCount": 1121
@@ -378,6 +379,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            day21第六章二叉树
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2022/12/26/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94%E7%99%BB%E5%BD%95%EF%BC%88%E5%8A%A0%E7%9B%90%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
@@ -399,6 +410,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="title">day21第六章二叉树</a></p>
+                            <p class="item-date"><time datetime="2023-01-01T09:23:12.000Z" itemprop="datePublished">2023-01-01</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -480,26 +511,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94JVM/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2022/12/24/JavaGuide%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94JVM/" class="title">JavaGuide笔记——JVM</a></p>
-                            <p class="item-date"><time datetime="2022-12-23T18:50:19.000Z" itemprop="datePublished">2022-12-24</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -512,7 +523,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a><span class="archive-list-count">38</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -555,7 +566,7 @@
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-                <p>&copy; 2022 Liu Yi</p>
+                <p>&copy; 2023 Liu Yi</p>
                 
                 <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
                 

@@ -6,25 +6,23 @@
     
 
     
-    <title>142. 环形链表 II | LiuYi&#39;s BLog</title>
+    <title>day21第六章二叉树 | LiuYi&#39;s BLog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="快慢指针思路如下：  推导如下：快指针走2步，慢指针走1步，同时从head出发； 如果快慢指针相遇，有： ​			2（x+y） &#x3D;  n(z+y) + x+y  (n&gt;&#x3D;1) ​			x &#x3D; (n-1)(z+y) + z  所以我们可以得到x&#x3D;z。 需要注意的是： 快慢指针相遇一定是慢指针在环里走第一圈的时候相遇的。  代码实现123456789101">
+    <meta name="description" content="530.二叉搜索树的最小绝对差中序遍历，双指针，递归 12345678910111213141516171819202122class Solution &amp;#123;        Integer res &#x3D; Integer.MAX_VALUE;    TreeNode pre;        public int getMinimumDifference(TreeNode root) &amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="142. 环形链表 II">
-<meta property="og:url" content="https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/index.html">
+<meta property="og:title" content="day21第六章二叉树">
+<meta property="og:url" content="https://xduly.github.io/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="LiuYi&#39;s BLog">
-<meta property="og:description" content="快慢指针思路如下：  推导如下：快指针走2步，慢指针走1步，同时从head出发； 如果快慢指针相遇，有： ​			2（x+y） &#x3D;  n(z+y) + x+y  (n&gt;&#x3D;1) ​			x &#x3D; (n-1)(z+y) + z  所以我们可以得到x&#x3D;z。 需要注意的是： 快慢指针相遇一定是慢指针在环里走第一圈的时候相遇的。  代码实现123456789101">
+<meta property="og:description" content="530.二叉搜索树的最小绝对差中序遍历，双指针，递归 12345678910111213141516171819202122class Solution &amp;#123;        Integer res &#x3D; Integer.MAX_VALUE;    TreeNode pre;        public int getMinimumDifference(TreeNode root) &amp;#123">
 <meta property="og:locale">
-<meta property="og:image" content="https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/%E6%80%9D%E8%B7%AF.png">
-<meta property="article:published_time" content="2022-12-14T03:17:23.000Z">
-<meta property="article:modified_time" content="2022-12-14T03:34:10.891Z">
+<meta property="article:published_time" content="2023-01-01T09:23:12.000Z">
+<meta property="article:modified_time" content="2023-01-01T10:32:02.233Z">
 <meta property="article:author" content="Liu Yi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/%E6%80%9D%E8%B7%AF.png">
     
 
     
@@ -156,14 +154,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-142. 环形链表 II" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-day21第六章二叉树" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        142. 环形链表 II
+        day21第六章二叉树
         </h1>
     
 
@@ -174,16 +172,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/" class="article-date">
-       <time datetime="2022-12-14T03:17:23.000Z" itemprop="datePublished">2022-12-14</time>
+    <a href="/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+       <time datetime="2023-01-01T09:23:12.000Z" itemprop="datePublished">2023-01-01</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/" class="article-date">
-     <time datetime="2022-12-14T03:34:10.891Z" itemprop="dateModified">2022-12-14</time>
+  <a href="/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+     <time datetime="2023-01-01T10:32:02.233Z" itemprop="dateModified">2023-01-01</time>
   </a>
 </div>
 
@@ -205,17 +203,14 @@
 
             
 
-            <h2 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h2><h3 id="思路如下："><a href="#思路如下：" class="headerlink" title="思路如下："></a>思路如下：</h3><img src="/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/思路.png" style="zoom:53%;">
+            <h1 id="530-二叉搜索树的最小绝对差"><a href="#530-二叉搜索树的最小绝对差" class="headerlink" title="530.二叉搜索树的最小绝对差"></a>530.二叉搜索树的最小绝对差</h1><p>中序遍历，双指针，递归</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="type">Integer</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">    TreeNode pre;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getMinimumDifference</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        traversal(root);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">traversal</span><span class="params">(TreeNode cur)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(cur == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        traversal(cur.left);</span><br><span class="line">        <span class="keyword">if</span>(pre!=<span class="literal">null</span>)&#123;</span><br><span class="line">            res = Math.min(res,cur.val-pre.val);</span><br><span class="line">        &#125;</span><br><span class="line">        pre = cur;</span><br><span class="line">        traversal(cur.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="推导如下："><a href="#推导如下：" class="headerlink" title="推导如下："></a>推导如下：</h3><p>快指针走2步，慢指针走1步，同时从head出发；</p>
-<p>如果快慢指针相遇，有：</p>
-<p>​			2（x+y） &#x3D;  n(z+y) + x+y  (n&gt;&#x3D;1)</p>
-<p>​			x &#x3D; (n-1)(z+y) + z</p>
-<p> 所以我们可以得到x&#x3D;z。</p>
-<h3 id="需要注意的是："><a href="#需要注意的是：" class="headerlink" title="需要注意的是："></a>需要注意的是：</h3><ol>
-<li>快慢指针相遇一定是慢指针在环里走第一圈的时候相遇的。</li>
-</ol>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">detectCycle</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">while</span>(fast != <span class="literal">null</span> &amp;&amp; fast.next != <span class="literal">null</span>)&#123;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            <span class="keyword">if</span>(fast == slow)&#123;</span><br><span class="line">                <span class="type">ListNode</span> <span class="variable">index1</span> <span class="operator">=</span> fast;</span><br><span class="line">                <span class="type">ListNode</span> <span class="variable">index2</span> <span class="operator">=</span> head;</span><br><span class="line">                <span class="keyword">while</span>(index1!=index2)&#123; <span class="comment">//多走x步，找到入环点并返回</span></span><br><span class="line">                    index1 = index1.next;</span><br><span class="line">                    index2 = index2.next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> index1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="501-二叉搜索树中的众数"><a href="#501-二叉搜索树中的众数" class="headerlink" title="501.二叉搜索树中的众数"></a>501.二叉搜索树中的众数</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] findMode(TreeNode root) &#123;</span><br><span class="line">		Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">		List&lt;Integer&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  <span class="comment">//存储众数</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> list.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line">		&#125;</span><br><span class="line">		 </span><br><span class="line">		searchBST(root, map);</span><br><span class="line"></span><br><span class="line">		List&lt;Map.Entry&lt;Integer, Integer&gt;&gt; mapList = map.entrySet().stream()</span><br><span class="line">				.sorted((c1, c2) -&gt; c2.getValue().compareTo(c1.getValue()))</span><br><span class="line">				.collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">		list.add(mapList.get(<span class="number">0</span>).getKey());</span><br><span class="line"> </span><br><span class="line"> 		<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; mapList.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (mapList.get(i).getValue() == mapList.get(i - <span class="number">1</span>).getValue()) &#123;</span><br><span class="line">				list.add(mapList.get(i).getKey());</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> list.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line">		<span class="comment">//将integer类型的集合元素转换为流，然后通过Integer::intValue形式取出来，在使用.toArray()进行组装为数组。</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">void</span> <span class="title function_">searchBST</span><span class="params">(TreeNode curr, Map&lt;Integer, Integer&gt; map)</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (curr == <span class="literal">null</span>) <span class="keyword">return</span>;</span><br><span class="line">		map.put(curr.val, map.getOrDefault(curr.val, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">		searchBST(curr.left, map);</span><br><span class="line">		searchBST(curr.right, map);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; resList;</span><br><span class="line">    <span class="type">int</span> maxCount;</span><br><span class="line">    <span class="type">int</span> count;</span><br><span class="line">    TreeNode pre;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] findMode(TreeNode root) &#123;</span><br><span class="line">        resList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        maxCount = <span class="number">0</span>;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        pre = <span class="literal">null</span>;</span><br><span class="line">        findMode1(root);</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> resList.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">findMode1</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        findMode1(root.left);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">rootValue</span> <span class="operator">=</span> root.val;</span><br><span class="line">        <span class="comment">// 计数</span></span><br><span class="line">        <span class="keyword">if</span> (pre == <span class="literal">null</span> || rootValue != pre.val) &#123;</span><br><span class="line">            count = <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 更新结果以及maxCount</span></span><br><span class="line">        <span class="keyword">if</span> (count &gt; maxCount) &#123;</span><br><span class="line">            resList.clear();</span><br><span class="line">            resList.add(rootValue);</span><br><span class="line">            maxCount = count;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (count == maxCount) &#123;</span><br><span class="line">            resList.add(rootValue);</span><br><span class="line">        &#125;</span><br><span class="line">        pre = root;</span><br><span class="line"></span><br><span class="line">        findMode1(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="236-二叉树的最近公共祖先"><a href="#236-二叉树的最近公共祖先" class="headerlink" title="236. 二叉树的最近公共祖先"></a>236. 二叉树的最近公共祖先</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">lowestCommonAncestor</span><span class="params">(TreeNode root, TreeNode p, TreeNode q)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span> || root == p || root == q) &#123; <span class="comment">// 递归结束条件</span></span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 后序遍历</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">left</span> <span class="operator">=</span> lowestCommonAncestor(root.left, p, q);</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">right</span> <span class="operator">=</span> lowestCommonAncestor(root.right, p, q);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(left == <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) &#123; <span class="comment">// 若未找到节点 p 或 q</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(left == <span class="literal">null</span> &amp;&amp; right != <span class="literal">null</span>) &#123; <span class="comment">// 若找到一个节点</span></span><br><span class="line">            <span class="keyword">return</span> right;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(left != <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) &#123; <span class="comment">// 若找到一个节点</span></span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123; <span class="comment">// 若找到两个节点</span></span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -224,7 +219,7 @@
 
 
 
-    <a data-url="https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/" data-id="clcd8hwuk0001coon3vhc26hq" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://xduly.github.io/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clcd8hwvp000zcoonftijggcc" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -294,26 +289,17 @@
             "@type": "Person",
             "name": "Liu Yi"
         },
-        "headline": "142. 环形链表 II",
-        "image": "https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/思路.png",
+        "headline": "day21第六章二叉树",
+        "image": "https://xduly.github.io",
         "keywords": "",
         "genre": "",
-        "datePublished": "2022-12-14",
-        "dateCreated": "2022-12-14",
-        "dateModified": "2022-12-14",
-        "url": "https://xduly.github.io/2022/12/14/142. 环形链表 II/",
-        "description": "快慢指针思路如下：
-
-推导如下：快指针走2步，慢指针走1步，同时从head出发；
-如果快慢指针相遇，有：
-​			2（x+y） &#x3D;  n(z+y) + x+y  (n&gt;&#x3D;1)
-​			x &#x3D; (n-1)(z+y) + z
- 所以我们可以得到x&#x3D;z。
-需要注意的是：
-快慢指针相遇一定是慢指针在环里走第一圈的时候相遇的。
-
-代码实现123456789101",
-        "wordCount": 362
+        "datePublished": "2023-01-01",
+        "dateCreated": "2023-01-01",
+        "dateModified": "2023-01-01",
+        "url": "https://xduly.github.io/2023/01/01/day21第六章二叉树/",
+        "description": "530.二叉搜索树的最小绝对差中序遍历，双指针，递归
+12345678910111213141516171819202122class Solution &#123;        Integer res = Integer.MAX_VALUE;    TreeNode pre;        public int getMinimumDifference(TreeNode root) &#123",
+        "wordCount": 1206
     }
 </script>
 
@@ -394,20 +380,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2022/12/14/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
-        <p class="article-nav-title">
-        
-            242.有效的字母异位词
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2022/12/12/%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2022/12/26/day20%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">链表相交</p>
+        <p class="article-nav-title">day20第六章二叉树</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -603,7 +579,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://xduly.github.io/2022/12/14/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II/';
+    var disqus_url = 'https://xduly.github.io/2023/01/01/day21%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%BA%8C%E5%8F%89%E6%A0%91/';
     
     (function() {
     var dsq = document.createElement('script');
